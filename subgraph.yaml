@@ -1,0 +1,26 @@
+specVersion: 0.0.2
+description: Auction
+repository: https://github.com/nftrade/auction-contracts
+schema:
+  file: schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: Auction
+    network: local
+    source:
+      address: "0x40A663C5eF3E86F048e8CA0C8c0300E20110A158"
+      abi: Auction
+      startBlock: 10040647
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - Token
+      abis:
+        - name: Auction
+          file: ./build/contracts/Auction.json
+      eventHandlers:
+        - event: BidPlaced(indexed address,uint256,uint256)
+          handler: handleBidPlaced
+      file: ./src/mapping.ts

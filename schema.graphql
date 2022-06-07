@@ -1,0 +1,11 @@
+type Account @entity {
+	id: ID!
+	bids: [Bid!]! @derivedFrom(field: "account")
+}
+
+type Bid @entity {
+	id: ID!
+	account: Account!
+	amount: BigInt!
+	time: BigInt!
+}

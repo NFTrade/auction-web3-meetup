@@ -1,0 +1,29 @@
+{
+  "name": "auction",
+  "version": "1.0.0",
+  "description": "auction",
+  "main": "truffle-config.js",
+  "scripts": {
+    "test": "truffle test",
+    "graph:codegen": "graph codegen",
+    "graph:build": "graph build",
+    "graph:create": "graph create auction --node http://127.0.0.1:8020",
+    "graph:deploy": "graph deploy auction --ipfs http://localhost:5001 --node http://127.0.0.1:8020"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@graphprotocol/graph-cli": "^0.25.0",
+    "@graphprotocol/graph-ts": "^0.24.1",
+    "@openzeppelin/contracts": "^4.1.0",
+    "@truffle/hdwallet-provider": "1.4.2",
+    "bignumber.js": "8.0.2",
+    "chai": "^4.2.0",
+    "chai-bignumber": "^3.0.0",
+    "eslint": "^7.25.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "ethlint": "1.2.3",
+    "solidity-coverage": "0.6.0-beta.3",
+    "truffle": "^5.5.17"
+  }
+}
