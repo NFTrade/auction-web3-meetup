@@ -11,7 +11,8 @@ contract Auction is Ownable, ReentrancyGuard {
 
     bool public isOpen = true;
 
-    uint256 public minBid = 10000;
+    uint256 public minBid = 1 ether;
+
     uint256 public highestBidAmount;
     address public highestBidAccount;
 
